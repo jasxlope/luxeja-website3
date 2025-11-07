@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxeja | Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
+            <ul class="nav-links">
+                <li><a href="womens.html">Womens</a></li>
+                <li><a href="mens.html">Mens</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" placeholder="Search Luxeja..." id="searchInput" />
+                <button onclick="searchSite()">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-form-section">
+        <h2>Connect With Our Community</h2>
+        <hr />
+
+        <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST"
+            onsubmit="showMessage(event)">
+            <div class="form-group">
+                <input type="text" name="firstName" placeholder="First Name" required />
+                <input type="text" name="lastName" placeholder="Last Name" required />
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="brandAmbassador" value="Yes" />
+                    I am interested in joining as a Brand Ambassador
+                </label>
+            </div>
+            <button type="submit" class="cta">Submit</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Phone:</strong> 000-000-000</p>
+            <p><strong>Email:</strong> info@mysite.com</p>
+            <p><strong>Location:</strong> Las Vegas, NV, USA</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="form-message" style="display:none; color: green;">
+                Thanks! Your message has been sent.
+            </div>
+
+            <p class="policy">
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Shipping Policy</a> |
+                <a href="#">Terms & Conditions</a> |
+                <a href="#">Refund Policy</a> |
+                <a href="#">Accessibility Statement</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.querySelector(".form-message").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

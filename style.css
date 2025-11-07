@@ -1,0 +1,680 @@
+/* --------------------
+   Your Current CSS
+-------------------- */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #040564;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #030c3f;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #111;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-search input {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.nav-search button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+/* --------------------
+   NEW HOMEPAGE STYLES
+-------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.headline {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.cta {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #333;
+}
+
+/* --------------------
+   ABOUT PAGE STYLES
+-------------------- */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    color: #030c3f;
+}
+
+.about-text h2 {
+    font-family: 'EB Garamond', serif;
+    /* Elegant heading font */
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.about-text h5 {
+    font-family: 'Playfair Display', serif;
+    /* Sophisticated body font */
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: left;
+    color: #030c3f;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+
+/* --------------------
+   CONTACT PAGE STYLES
+-------------------- */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-title {
+    flex: 1;
+    color: #030c3f;
+}
+
+.contact-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contact-title hr {
+    border: 1px solid #030c3f;
+    width: 80%;
+    margin-top: 0.5rem;
+}
+
+.contact-info {
+    flex: 1;
+    color: #030c3f;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: #030c3f;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.privacy {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #030c3f;
+}
+
+/* --------------------
+   CONNECT WITH COMMUNITY STYLES
+-------------------- */
+.community-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #fff;
+    color: #030c3f;
+}
+
+.community-section h2 {
+    font-size: 3rem;
+    /* Larger font */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.community-section hr {
+    width: 100px;
+    border: 1px solid #030c3f;
+    margin: 0 auto 2rem auto;
+}
+
+.community-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: #030c3f;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.policy {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.policy a {
+    color: #030c3f;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.policy a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* --------------------
+   CONTACT FORM STYLES
+-------------------- */
+.contact-form-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #fff;
+    color: #030c3f;
+}
+
+.contact-form-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section hr {
+    width: 100px;
+    border: 1px solid #030c3f;
+    margin: 0 auto 2rem auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form .form-group label {
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.contact-form .cta {
+    background: #030c3f;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.contact-form .cta:hover {
+    background: #222f5a;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: #030c3f;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.policy {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.policy a {
+    color: #030c3f;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.policy a:hover {
+    text-decoration: underline;
+}
+
+/* --------------------
+   OFFERINGS SECTION
+-------------------- */
+.offerings-section {
+    background-color: #030c3f;
+    /* deep navy blue */
+    color: #fff;
+    padding: 6rem 2rem 4rem 2rem;
+    /* increased top padding for breathing space */
+    font-family: 'Playfair Display', serif;
+    /* elegant, chic font */
+}
+
+.offerings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offerings-title {
+    font-size: 3rem;
+    /* slightly larger */
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    /* space below title */
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.offerings-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.offering-card {
+    background-color: #0d1a4a;
+    /* slightly lighter navy */
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.offering-card:hover {
+    transform: translateY(-10px);
+    background-color: #1a2b6f;
+}
+
+.offering-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.offering-card h3 {
+    font-size: 1.6rem;
+    /* bigger for elegance */
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.offering-card .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* Elegant font for Offerings title */
+.offerings-title {
+    font-family: 'Playfair Display', serif;
+    /* Elegant, script style */
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Offering cards styling */
+.offering-card h3 {
+    font-family: 'Playfair Display', serif;
+    /* Elegant serif for product name */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Price styling */
+.offering-card .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.journey-subtitle {
+    font-family: 'Playfair Display', serif;
+    /* elegant and chic */
+    font-size: 2rem;
+    color: #030c3f;
+    /* navy blue */
+    margin-bottom: 1.5rem;
+    /* space between subtitle and main heading */
+    letter-spacing: 1px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #030c3f;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* WOMENS PAGE LAYOUT */
+.womens-section .container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* SIDEBAR */
+.filters {
+    flex: 1;
+    max-width: 220px;
+    position: sticky;
+    top: 100px;
+    /* stays below navbar */
+    align-self: flex-start;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.filters h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-card .price {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.product-card .cta {
+    padding: 0.6rem 1.2rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-card .cta:hover {
+    background: #333;
+}
+
+/* Modern Dropdown Filters */
+.filters .dropdown {
+    position: relative;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.filters .dropdown span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.filters .dropdown span:hover {
+    background-color: #eaeaea;
+}
+
+.filters .dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 100;
+}
+
+.filters .dropdown-menu li {
+    padding: 8px 10px;
+    transition: background 0.2s ease;
+}
+
+.filters .dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show menu on hover */
+.filters .dropdown:hover .dropdown-menu {
+    display: block;
+}

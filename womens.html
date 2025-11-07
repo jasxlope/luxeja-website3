@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxeja | Womens</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
+            <ul class="nav-links">
+                <li><a href="womens.html" class="active">Womens</a></li>
+                <li><a href="mens.html">Mens</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" placeholder="Search Luxeja..." id="searchInput" />
+                <button onclick="searchSite()">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN SHOP SECTION -->
+    <section class="womens-section">
+        <div class="container">
+            <!-- LEFT SIDEBAR (Filters) -->
+            <<aside class="filters">
+  <h3>Filter Products</h3>
+
+  <!-- Product Type -->
+  <div class="filter-group dropdown">
+    <span>Product Type <i class="fa fa-chevron-down"></i></span>
+    <ul class="dropdown-menu">
+      <li>Sports Bra</li>
+      <li>Leggings</li>
+      <li>Tops</li>
+    </ul>
+  </div>
+
+  <!-- Size -->
+  <div class="filter-group dropdown">
+    <span>Size <i class="fa fa-chevron-down"></i></span>
+    <ul class="dropdown-menu">
+      <li>XS</li>
+      <li>S</li>
+      <li>M</li>
+      <li>L</li>
+      <li>XL</li>
+    </ul>
+  </div>
+
+  <!-- Color -->
+  <div class="filter-group dropdown">
+    <span>Color <i class="fa fa-chevron-down"></i></span>
+    <ul class="dropdown-menu">
+      <li>Black</li>
+      <li>White</li>
+      <li>Pink</li>
+      <li>Blue</li>
+    </ul>
+  </div>
+</aside>
+
+            <!-- RIGHT PRODUCT GRID -->
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300" alt="Sports Bra 1">
+                    <h3>Sports Bra</h3>
+                    <p class="price">$35</p>
+                    <button class="cta">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300" alt="Leggings 1">
+                    <h3>Leggings</h3>
+                    <p class="price">$55</p>
+                    <button class="cta">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300" alt="Tops 1">
+                    <h3>Tank Top</h3>
+                    <p class="price">$28</p>
+                    <button class="cta">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x300" alt="Sports Bra 2">
+                    <h3>Sports Bra 2</h3>
+                    <p class="price">$38</p>
+                    <button class="cta">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

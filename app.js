@@ -138,4 +138,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
         applyWomenFilters();
     }
+
+    const giftPopup = document.querySelector("#giftPopup");
+    const giftPopupForm = document.querySelector("#giftPopupForm");
+    const giftPopupClose = document.querySelector("#giftPopupClose");
+    const giftPopupMessage = document.querySelector("#giftPopupMessage");
+    const giftPopupEmail = document.querySelector("#giftEmail");
+    const popupStorageKey = "luxejaGiftPopupDismissed";
+    const emailStorageKey = "luxejaGiftPopupEmail";
+
+    if (giftPopup) {
+        const closeGiftPopup = () => {
+            giftPopup.classList.remove("is-visible");
+            giftPopup.setAttribute("aria-hidden", "true");
+            localStorage.setItem(popupStorageKey, "true");
+        };
+
+        const openGiftPopup = () => {
+            giftPopup.classList.add("is-visible");
+            giftPopup.setAttribute("aria-hidden", "false");
+        };
+
+        if (!localStorage.getItem(popupStorageKey)) {
+            window.setTimeout(openGiftPopup, 900);
+        }
+
+        giftPopup.addEventListener("click", (event) => {
+            if (event.target instanceof HTMLElement && event.target.dataset.popupClose === "true") {
+                closeGiftPopup();
+            }
+        });
+
+        if (giftPopupClose) {
+            giftPopupClose.addEventListener("click", closeGiftPopup);
+        }
+
+        if (giftPopupForm && giftPopupEmail) {
+            giftPopupForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const email = giftPopupEmail.value.trim();
+                const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+                if (!emailIsValid) {
+                    if (giftPopupMessage) {
+                        giftPopupMessage.textContent = "Please enter a valid email address.";
+                    }
+                    return;
+                }
+
+                localStorage.setItem(emailStorageKey, email);
+                localStorage.setItem(popupStorageKey, "true");
+
+                if (giftPopupMessage) {
+                    giftPopupMessage.textContent = "You're on the Luxeja list for gift updates.";
+                }
+
+                giftPopupForm.reset();
+                window.setTimeout(closeGiftPopup, 1400);
+            });
+        }
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && giftPopup.classList.contains("is-visible")) {
+                closeGiftPopup();
+            }
+        });
+    }
 });

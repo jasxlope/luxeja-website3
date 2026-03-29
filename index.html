@@ -11,6 +11,23 @@
 </head>
 
 <body>
+    <div class="gift-popup" id="giftPopup" aria-hidden="true">
+        <div class="gift-popup-backdrop" data-popup-close="true"></div>
+        <div class="gift-popup-card" role="dialog" aria-modal="true" aria-labelledby="giftPopupTitle">
+            <button class="gift-popup-close" id="giftPopupClose" type="button" aria-label="Close gift signup">Close</button>
+            <span class="gift-popup-eyebrow">Private Gift Access</span>
+            <h2 id="giftPopupTitle">Interested in a gift?</h2>
+            <p>
+                Join the Luxeja list for exclusive gift drops, first access, and elevated release updates.
+            </p>
+            <form class="gift-popup-form" id="giftPopupForm">
+                <label class="sr-only" for="giftEmail">Email address</label>
+                <input type="email" id="giftEmail" name="email" placeholder="Enter your email" required>
+                <button type="submit">Join The List</button>
+            </form>
+            <p class="gift-popup-message" id="giftPopupMessage" aria-live="polite"></p>
+        </div>
+    </div>
 
     <header>
         <nav class="navbar">

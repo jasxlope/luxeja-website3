@@ -146,14 +146,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const giftPopupClose = document.querySelector("#giftPopupClose");
     const giftPopupMessage = document.querySelector("#giftPopupMessage");
     const giftPopupEmail = document.querySelector("#giftEmail");
-    const popupStorageKey = "luxejaGiftPopupDismissed";
+    const popupStorageKey = "luxejaGiftPopupState";
     const emailStorageKey = "luxejaGiftPopupEmail";
 
     if (giftPopup) {
+        const readPopupState = () => {
+            try {
+                return JSON.parse(localStorage.getItem(popupStorageKey) || "null");
+            } catch (_error) {
+                return null;
+            }
+        };
+
+        const writePopupState = (state) => {
+            localStorage.setItem(popupStorageKey, JSON.stringify(state));
+        };
+
+        const shouldShowGiftPopup = () => {
+            const popupState = readPopupState();
+
+            if (!popupState) {
+                return true;
+            }
+
+            if (popupState.subscribed) {
+                return false;
+            }
+
+            if (!popupState.dismissedUntil) {
+                return true;
+            }
+
+            return Date.now() > popupState.dismissedUntil;
+        };
+
         const closeGiftPopup = () => {
             giftPopup.classList.remove("is-visible");
             giftPopup.setAttribute("aria-hidden", "true");
-            localStorage.setItem(popupStorageKey, "true");
         };
 
         const openGiftPopup = () => {
@@ -161,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
             giftPopup.setAttribute("aria-hidden", "false");
         };
 
-        if (!localStorage.getItem(popupStorageKey)) {
+        if (shouldShowGiftPopup()) {
             window.setTimeout(openGiftPopup, 900);
         }
 
@@ -172,7 +201,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (giftPopupClose) {
-            giftPopupClose.addEventListener("click", closeGiftPopup);
+            giftPopupClose.addEventListener("click", () => {
+                writePopupState({
+                    dismissedUntil: Date.now() + (3 * 24 * 60 * 60 * 1000),
+                    subscribed: false
+                });
+                closeGiftPopup();
+            });
         }
 
         if (giftPopupForm && giftPopupEmail) {
@@ -212,7 +247,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     localStorage.setItem(emailStorageKey, email);
-                    localStorage.setItem(popupStorageKey, "true");
+                    writePopupState({
+                        subscribed: true,
+                        dismissedUntil: null
+                    });
 
                     if (giftPopupMessage) {
                         giftPopupMessage.textContent = data.message || "You're on the Luxeja list for gift updates.";

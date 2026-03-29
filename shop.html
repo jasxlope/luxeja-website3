@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxeja | Shop</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts for a premium feel -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <!-- HEADER -->
     <header>
         <nav class="navbar sticky-nav">
-            <h1 class="logo">LUXEJA</h1>
+            <a href="index.html" class="header-mark" aria-label="Luxeja home">
+                <img src="images/phoenix_logo_lux.png" alt="Luxeja phoenix logo">
+            </a>
+            <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
             <ul class="nav-links elegant-font">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
                 <li><a href="shop.html" class="active">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -26,93 +28,118 @@
         </nav>
     </header>
 
-    <!-- SHOP SECTION -->
-    <main class="shop">
-        <!-- WOMEN'S COLLECTION -->
-        <section class="collection">
-            <h2>Women’s Collection</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Dress1" alt="Sports Bra">
-                    <h3>Sports Bra</h3>
-                    <p class="price">$79</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Dress2" alt="Sports Bra">
-                    <h3>Sports Bra</h3>
-                    <p class="price">$120</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Top" alt="Workout Shorts">
-                    <h3>Workout Shorts</h3>
-                    <p class="price">$45</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Swimwear" alt="Seamless Leggings">
-                    <h3>Seamless Leggings</h3>
-                    <p class="price">$60</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
+    <main class="shop-luxury">
+        <section class="shop-hero">
+            <div class="shop-hero-copy">
+                <span class="eyebrow">Luxury Shop</span>
+                <h1>Refined essentials for women and men.</h1>
+                <p>
+                    Discover elevated silhouettes, premium textures, and modern wardrobe staples curated with the Luxeja point of view.
+                </p>
             </div>
         </section>
 
-        <!-- MEN'S COLLECTION -->
-        <section class="collection">
-            <h2>Men’s Collection</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Suit" alt="Classic Suit">
-                    <h3>Classic Suit</h3>
-                    <p class="price">$150</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Shirt" alt="Designer Shirt">
-                    <h3>Designer Shirt</h3>
-                    <p class="price">$55</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Jacket" alt="Luxury Jacket">
-                    <h3>Luxury Jacket</h3>
-                    <p class="price">$110</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Shoes" alt="Formal Shoes">
-                    <h3>Formal Shoes</h3>
-                    <p class="price">$80</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
+        <section class="shop-edit">
+            <div class="shop-section-header">
+                <span class="subtitle">Womens</span>
+                <h2>Women's Collection</h2>
+                <p>Soft structure, sculpted fits, and confident pieces designed to move beautifully from day to night.</p>
+            </div>
+
+            <div class="shop-product-grid">
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1506629905607-89f1f1d8f0fe?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing a neutral activewear set">
+                    <div class="shop-product-copy">
+                        <h3>Signature Sculpt Set</h3>
+                        <p>High-rise contour leggings with a refined support bra.</p>
+                        <div class="shop-product-meta">
+                            <span>$128</span>
+                            <a href="womens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman in a luxury cream lounge set">
+                    <div class="shop-product-copy">
+                        <h3>Velour Lounge Edit</h3>
+                        <p>Relaxed tailoring and polished comfort in warm neutral tones.</p>
+                        <div class="shop-product-meta">
+                            <span>$146</span>
+                            <a href="womens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing a sleek black fashion dress">
+                    <div class="shop-product-copy">
+                        <h3>After Hours Slip</h3>
+                        <p>Minimal elegance with fluid movement and a modern finish.</p>
+                        <div class="shop-product-meta">
+                            <span>$172</span>
+                            <a href="womens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- ACCESSORIES -->
-        <section class="collection">
-            <h2>Accessories</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Bag" alt="Luxury Bag">
-                    <h3>Luxury Bag</h3>
-                    <p class="price">$99</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400?text=Sunglasses" alt="Sunglasses">
-                    <h3>Sunglasses</h3>
-                    <p class="price">$45</p>
-                    <button class="btn-add">Add to Cart</button>
-                </div>
+        <section class="shop-edit shop-edit-men">
+            <div class="shop-section-header">
+                <span class="subtitle">Mens</span>
+                <h2>Men's Collection</h2>
+                <p>Clean tailoring, understated confidence, and everyday luxury built around fit, movement, and finish.</p>
+            </div>
+
+            <div class="shop-product-grid">
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+                        alt="Man in modern relaxed luxury styling">
+                    <div class="shop-product-copy">
+                        <h3>Tailored Motion Jacket</h3>
+                        <p>Lightweight structure with sharp lines and a relaxed premium feel.</p>
+                        <div class="shop-product-meta">
+                            <span>$164</span>
+                            <a href="mens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
+                        alt="Man in elevated neutral basics">
+                    <div class="shop-product-copy">
+                        <h3>Essential Knit Polo</h3>
+                        <p>A refined staple designed for clean layering and easy sophistication.</p>
+                        <div class="shop-product-meta">
+                            <span>$92</span>
+                            <a href="mens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-product-card">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop"
+                        alt="Man wearing a luxury dark suit">
+                    <div class="shop-product-copy">
+                        <h3>Evening Line Trouser</h3>
+                        <p>Precision-cut tailoring with a sleek silhouette for elevated nights out.</p>
+                        <div class="shop-product-meta">
+                            <span>$138</span>
+                            <a href="mens.html">Shop Now</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+        <p>&copy; 2026 Luxeja. All rights reserved.</p>
     </footer>
 </body>
 

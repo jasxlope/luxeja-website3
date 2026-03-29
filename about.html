@@ -6,56 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxeja | About Us</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- NAVBAR -->
-<header>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
-        <ul class="nav-links">
-            <li><a href="womens.html">Womens</a></li>
-            <li><a href="mens.html">Mens</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <div class="nav-search">
-            <input type="text" placeholder="Search Luxeja..." id="searchInput" />
-            <button onclick="searchSite()">🔍</button>
-        </div>
-    </nav>
-</header>
 
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="header-mark" aria-label="Luxeja home">
+                <img src="images/phoenix_logo_lux.png" alt="Luxeja phoenix logo">
+            </a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search collection..." id="searchInput" />
+                <button onclick="searchSite()" aria-label="Search">Search</button>
+            </div>
+            <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- ABOUT SECTION -->
-    <!-- ABOUT SECTION -->
+    <section class="about-hero-simple">
+    <div class="about-hero-content">
+        <h1>Rising Through Fitness</h1>
+        <p class="hero-tagline">The Phoenix of Activewear</p>
+    </div>
+</section>
+
+<section class="narrative-section">
+    <div class="narrative-container">
+        <span class="subtitle">Our Narrative</span>
+        
+        <div class="story-content">
+             <p>
+                LUXEJA is a Las Vegas-based online shop specializing in luxurious, modern activewear built from a story of 
+                <strong>resilience, culture, and transformation.</strong>
+            </p>
+            <p>
+                Rooted in the rich <em>tierra</em> of Mexico and raised in the United States, our foundation is one of strength, 
+                ambition, and rising beyond limits...
+            </p>
+            </div>
+    </div>
+</section>
+
     <section class="about-section">
         <div class="about-container">
-    
-            <!-- Text content -->
             <div class="about-text">
+                <span class="subtitle">Our Narrative</span>
                 <h2>OUR JOURNEY TO WELLNESS</h2>
-                <h5>
-                    LUXEJA is a Las Vegas-based online shop specializing in luxurious, modern active wear for both men and
-                    women.
-                    Our diverse collection features everything from sports bras to stylish leggings, each piece designed to
-                    enhance your workout.
-                    Beyond just clothing, we strive to build a community focused on fitness and well-being, empowering
-                    individuals to prioritize health and personal growth.
-                </h5>
+            
+                <p>
+                    LUXEJA is a Las Vegas-based online shop specializing in luxurious, modern activewear built from a story of
+                    <strong>resilience, culture, and transformation.</strong>
+                </p>
+            
+                <p>
+                    Rooted in the rich <em>tierra</em> of Mexico and raised in the United States, our foundation is one of strength,
+                    ambition, and rising beyond limits. Like a phoenix, we believe in constantly evolving—turning challenges into
+                    power and stepping into our highest selves.
+                </p>
+            
+                <p>
+                    Our diverse collection features everything from high-performance sports bras to sculpting, stylish leggings.
+                    Each piece is designed to elevate your confidence and performance.
+                </p>
+            
+                <div class="philosophy-box">
+                    <div class="philosophy-item">
+                        <span class="icon">✧</span>
+                        <p><strong>Resilience:</strong> Honoring the roots that grounded us.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <span class="icon">✧</span>
+                        <p><strong>Evolution:</strong> Rising through every challenge.</p>
+                    </div>
+                </div>
+            
+                <p class="signature-quote">
+                    "Beyond clothing, LUXEJA is a lifestyle and a community, inspiring everyone to embrace their journey and rise
+                    unapologetically."
+                </p>
             </div>
-    
-            <!-- Image -->
+
             <div class="about-image">
-                <img src="https://via.placeholder.com/400x400" alt="Luxeja Activewear">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000"
+                    alt="Luxeja Phoenix Growth">
+                <div class="image-overlay-text">Rise with Luxeja</div>
             </div>
+        </div>
+    </section>
+<!--COMMUNITY TAG-->
+
+    <section class="community-cta">
+        <div class="community-content">
+            <span class="subtitle">Join the Movement</span>
+            <h2>RISE WITH THE COMMUNITY</h2>
+            <p>
+                Follow our journey on social media for daily inspiration,
+                behind-the-scenes looks at our <em>tierra</em>-inspired designs,
+                and to connect with a community that refuses to stay down.
+            </p>
     
+            <div class="social-buttons">
+                <a href="https://www.tiktok.com/@yourusername" class="social-btn tiktok" target="_blank">
+                    TikTok <span>→</span>
+                </a>
+                <a href="https://www.instagram.com/yourusername" class="social-btn instagram" target="_blank">
+                    Instagram <span>→</span>
+                </a>
+            </div>
         </div>
     </section>
 
-
     <footer>
-        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+        <p>&copy; 2026 LUXEJA. All rights reserved.</p>
     </footer>
 
     <script src="app.js"></script>

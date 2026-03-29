@@ -2,73 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxeja | Activewear</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Brand | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <!-- NAVBAR -->
+
     <header>
         <nav class="navbar">
+            <a href="index.html" class="header-mark" aria-label="Luxeja home">
+                <img src="images/phoenix_logo_lux.png" alt="Luxeja phoenix logo">
+            </a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search collection..." id="searchInput" />
+                <button onclick="searchSite()" aria-label="Search">Search</button>
+            </div>
+    
             <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
+    
             <ul class="nav-links">
-                <li><a href="womens.html" class="active">Womens</a></li>
-                <li><a href="mens.html">Mens</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <!-- Search Bar -->
-            <div class="nav-search">
-                <input type="text" placeholder="Looking for something..." id="searchInput" />
-                <button onclick="searchSite()">🔍</button>
-            </div>
         </nav>
     </header>
-
-
-    <!-- HERO SECTION -->
+    
     <section class="hero">
         <div class="hero-content">
-            <h2 class="headline">STAY FIT, STAY FABULOUS</h2>
+            <h2 class="headline">Fluent in Fashion</h2>
             <p class="subheadline">Crafting Community Through Fitness</p>
             <p class="description">
-                Discover modern gym wear designed for both men and women, combining luxury with functionality
-                to empower your workout experience.
+                Discover modern gym wear designed for luxury and functionality.
             </p>
             <a href="shop.html" class="cta">Shop Now</a>
         </div>
     </section>
-
-    <!-- OFFERINGS SECTION -->
-    <section class="offerings-section">
-        <div class="offerings-container">
-            <h2 class="offerings-title">Offerings</h2>
-            <div class="offerings-cards">
-                <div class="offering-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Detox Juice Wellness Plan">
-                    <h3>Detox Juice Wellness Plan</h3>
-                    <p class="price">$25</p>
+    
+    <section class="collections-section">
+        <div class="collections-container">
+            <h2 class="collections-title">Collections</h2>
+            <div class="collections-cards">
+                <div class="collection-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Active Wear">
+                    <h3>Active Wear</h3>
+                    <p class="price">$45</p>
                 </div>
-                <div class="offering-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Accessories">
-                    <h3>Accessories</h3>
-                    <p class="price">$15</p>
+                <div class="collection-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Lounge Wear">
+                    <h3>Lounge Wear</h3>
+                    <p class="price">$60</p>
+                </div>
+                <div class="collection-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Wellness Plans">
+                    <h3>Wellness Plans</h3>
+                    <p class="price">$25</p>
                 </div>
             </div>
         </div>
     </section>
-
     
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+        <p>&copy; 2026 LUXEJA FASHION. ALL RIGHTS RESERVED.</p>
     </footer>
-
+    
     <script src="app.js"></script>
-</body>
-
-</html>
+    </body>
+    
+    </html>

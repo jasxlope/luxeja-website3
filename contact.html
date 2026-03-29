@@ -2,92 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxeja | Contact</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- NAVBAR -->
+
     <header>
         <nav class="navbar">
+            <a href="index.html" class="header-mark" aria-label="Luxeja home">
+                <img src="images/phoenix_logo_lux.png" alt="Luxeja phoenix logo">
+            </a>
+            <div class="nav-search">
+                <input type="text" placeholder="Search collection..." id="searchInput" />
+                <button onclick="searchSite()" aria-label="Search">Search</button>
+            </div>
             <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
             <ul class="nav-links">
-                <li><a href="womens.html">Womens</a></li>
-                <li><a href="mens.html">Mens</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <div class="nav-search">
-                <input type="text" placeholder="Search Luxeja..." id="searchInput" />
-                <button onclick="searchSite()">🔍</button>
-            </div>
         </nav>
     </header>
 
-    <!-- CONTACT FORM SECTION -->
-    <section class="contact-form-section">
-        <h2>Connect With Our Community</h2>
-        <hr />
+    <section class="contact-section-refined">
+        <div class="contact-container-centered">
 
-        <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST"
-            onsubmit="showMessage(event)">
-            <div class="form-group">
-                <input type="text" name="firstName" placeholder="First Name" required />
-                <input type="text" name="lastName" placeholder="Last Name" required />
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Email Address" required />
-            </div>
-            <div class="form-group">
-                <textarea name="message" placeholder="Your Message" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" name="brandAmbassador" value="Yes" />
-                    I am interested in joining as a Brand Ambassador
-                </label>
-            </div>
-            <button type="submit" class="cta">Submit</button>
-        </form>
+            <span class="subtitle">Connect With Us</span>
+            <h2 class="contact-headline">LET'S RISE TOGETHER</h2>
 
-        <div class="contact-info">
-            <p><strong>Phone:</strong> 000-000-000</p>
-            <p><strong>Email:</strong> info@mysite.com</p>
-            <p><strong>Location:</strong> Las Vegas, NV, USA</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-
-            <div class="form-message" style="display:none; color: green;">
-                Thanks! Your message has been sent.
-            </div>
-
-            <p class="policy">
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Shipping Policy</a> |
-                <a href="#">Terms & Conditions</a> |
-                <a href="#">Refund Policy</a> |
-                <a href="#">Accessibility Statement</a>
+            <p class="contact-subtext">
+                Questions about our collections or your journey to wellness? <br>
+                We are here to assist you in stepping into your highest self.
             </p>
+
+            <div class="contact-methods">
+                <div class="method">
+                    <h3>Inquiries</h3>
+                    <p><a href="mailto:hello@luxeja.com">hello@luxeja.com</a></p>
+                </div>
+                <div class="method">
+                    <h3>Base</h3>
+                    <p>Las Vegas, NV</p>
+                </div>
+            </div>
+
+            <form class="refined-form">
+                <div class="form-row">
+                    <input type="text" placeholder="FULL NAME" required>
+                    <input type="email" placeholder="EMAIL ADDRESS" required>
+                </div>
+                <textarea placeholder="HOW CAN WE HELP YOU RISE?" rows="4"></textarea>
+                <button type="submit" class="cta-submit">Send Inquiry</button>
+            </form>
+
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+        <p>&copy; 2026 LUXEJA. All rights reserved.</p>
     </footer>
+    <script src="app.js"></script>
 
-    <script>
-        function showMessage(event) {
-            event.preventDefault();
-            document.querySelector(".form-message").style.display = "block";
-        }
-    </script>
 </body>
 
 </html>

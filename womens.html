@@ -6,106 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxeja | Womens</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- NAVBAR -->
     <header>
         <nav class="navbar">
+            <a href="index.html" class="header-mark" aria-label="Luxeja home">
+                <img src="images/phoenix_logo_lux.png" alt="Luxeja phoenix logo">
+            </a>
             <h1 class="logo"><a href="index.html">LUXEJA</a></h1>
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="womens.html" class="active">Womens</a></li>
-                <li><a href="mens.html">Mens</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-search">
                 <input type="text" placeholder="Search Luxeja..." id="searchInput" />
-                <button onclick="searchSite()">🔍</button>
+                <button onclick="searchSite()" aria-label="Search">Search</button>
             </div>
         </nav>
     </header>
 
-    <!-- MAIN SHOP SECTION -->
-    <section class="womens-section">
-        <div class="container">
-            <!-- LEFT SIDEBAR (Filters) -->
-            <<aside class="filters">
-  <h3>Filter Products</h3>
-
-  <!-- Product Type -->
-  <div class="filter-group dropdown">
-    <span>Product Type <i class="fa fa-chevron-down"></i></span>
-    <ul class="dropdown-menu">
-      <li>Sports Bra</li>
-      <li>Leggings</li>
-      <li>Tops</li>
-    </ul>
-  </div>
-
-  <!-- Size -->
-  <div class="filter-group dropdown">
-    <span>Size <i class="fa fa-chevron-down"></i></span>
-    <ul class="dropdown-menu">
-      <li>XS</li>
-      <li>S</li>
-      <li>M</li>
-      <li>L</li>
-      <li>XL</li>
-    </ul>
-  </div>
-
-  <!-- Color -->
-  <div class="filter-group dropdown">
-    <span>Color <i class="fa fa-chevron-down"></i></span>
-    <ul class="dropdown-menu">
-      <li>Black</li>
-      <li>White</li>
-      <li>Pink</li>
-      <li>Blue</li>
-    </ul>
-  </div>
-</aside>
-
-            <!-- RIGHT PRODUCT GRID -->
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Sports Bra 1">
-                    <h3>Sports Bra</h3>
-                    <p class="price">$35</p>
-                    <button class="cta">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Leggings 1">
-                    <h3>Leggings</h3>
-                    <p class="price">$55</p>
-                    <button class="cta">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Tops 1">
-                    <h3>Tank Top</h3>
-                    <p class="price">$28</p>
-                    <button class="cta">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Sports Bra 2">
-                    <h3>Sports Bra 2</h3>
-                    <p class="price">$38</p>
-                    <button class="cta">Add to Cart</button>
-                </div>
+    <main class="womens-luxury">
+        <section class="womens-hero">
+            <div class="womens-hero-copy">
+                <span class="eyebrow">Womens Collection</span>
+                <h1>Modern silhouettes with a soft luxury finish.</h1>
+                <p>
+                    Sculpted essentials, elegant neutrals, and elevated statement pieces designed to move with confidence.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
+        <section class="womens-curation">
+            <div class="shop-section-header">
+                <span class="subtitle">Refined Edit</span>
+                <h2>Filter Your Fit</h2>
+                <p>Search by piece and narrow the collection by size and color for a polished shopping experience.</p>
+            </div>
+
+            <form class="collection-filter-form" aria-label="Filter women's collection">
+                <div class="filter-control filter-search">
+                    <label for="womenSearchFilter">Search</label>
+                    <input type="text" id="womenSearchFilter" placeholder="Search dresses, sets, tops..." />
+                </div>
+
+                <div class="filter-control">
+                    <label for="womenSizeFilter">Size</label>
+                    <select id="womenSizeFilter">
+                        <option value="all">All sizes</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+
+                <div class="filter-control">
+                    <label for="womenColorFilter">Color</label>
+                    <select id="womenColorFilter">
+                        <option value="all">All colors</option>
+                        <option value="Black">Black</option>
+                        <option value="Cream">Cream</option>
+                        <option value="Rose">Rose</option>
+                        <option value="Mocha">Mocha</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="women-results-bar">
+                <p id="womenFilterSummary">Showing all pieces</p>
+            </div>
+
+            <div class="womens-product-grid">
+                <article class="women-product-card" data-name="Signature Sculpt Set" data-size="S" data-color="Black">
+                    <img src="https://images.unsplash.com/photo-1506629905607-89f1f1d8f0fe?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing a black activewear set">
+                    <div class="women-product-copy">
+                        <div class="women-product-topline">
+                            <span>Black</span>
+                            <span>Size S</span>
+                        </div>
+                        <h3>Signature Sculpt Set</h3>
+                        <p>Contour leggings paired with a sleek support bra in a rich noir finish.</p>
+                        <div class="women-product-meta">
+                            <span>$128</span>
+                            <button type="button" class="cta">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="women-product-card" data-name="Soft Structure Dress" data-size="M" data-color="Cream">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing a cream luxury dress">
+                    <div class="women-product-copy">
+                        <div class="women-product-topline">
+                            <span>Cream</span>
+                            <span>Size M</span>
+                        </div>
+                        <h3>Soft Structure Dress</h3>
+                        <p>A refined draped silhouette with clean movement and understated elegance.</p>
+                        <div class="women-product-meta">
+                            <span>$164</span>
+                            <button type="button" class="cta">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="women-product-card" data-name="Rose Lounge Edit" data-size="XS" data-color="Rose">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing a rose-toned lounge set">
+                    <div class="women-product-copy">
+                        <div class="women-product-topline">
+                            <span>Rose</span>
+                            <span>Size XS</span>
+                        </div>
+                        <h3>Rose Lounge Edit</h3>
+                        <p>Polished comfort in a soft tonal palette with an elevated off-duty feel.</p>
+                        <div class="women-product-meta">
+                            <span>$146</span>
+                            <button type="button" class="cta">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="women-product-card" data-name="Mocha Line Trouser" data-size="L" data-color="Mocha">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+                        alt="Woman wearing mocha tailored trousers">
+                    <div class="women-product-copy">
+                        <div class="women-product-topline">
+                            <span>Mocha</span>
+                            <span>Size L</span>
+                        </div>
+                        <h3>Mocha Line Trouser</h3>
+                        <p>Tailored volume and a fluid drape designed for sharp, modern dressing.</p>
+                        <div class="women-product-meta">
+                            <span>$138</span>
+                            <button type="button" class="cta">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 Luxeja. All rights reserved.</p>
+        <p>&copy; 2026 Luxeja. All rights reserved.</p>
     </footer>
-
+    <script src="app.js"></script>
 </body>
 
 </html>

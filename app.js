@@ -1,5 +1,7 @@
 console.log("Luxeja website loaded");
 
+const API_BASE_URL = window.LUXEJA_API_BASE || "";
+
 function toggleMenu() {
     const navLinks = document.querySelector(".nav-links");
 
@@ -174,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (giftPopupForm && giftPopupEmail) {
-            giftPopupForm.addEventListener("submit", (event) => {
+            giftPopupForm.addEventListener("submit", async (event) => {
                 event.preventDefault();
 
                 const email = giftPopupEmail.value.trim();
@@ -187,15 +189,42 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                localStorage.setItem(emailStorageKey, email);
-                localStorage.setItem(popupStorageKey, "true");
-
                 if (giftPopupMessage) {
-                    giftPopupMessage.textContent = "You're on the Luxeja list for gift updates.";
+                    giftPopupMessage.textContent = "Submitting your email...";
                 }
 
-                giftPopupForm.reset();
-                window.setTimeout(closeGiftPopup, 1400);
+                try {
+                    const response = await fetch(`${API_BASE_URL}/api/subscribers`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email,
+                            source: "gift-popup"
+                        })
+                    });
+
+                    const data = await response.json().catch(() => ({}));
+
+                    if (!response.ok) {
+                        throw new Error(data.error || "Unable to subscribe right now.");
+                    }
+
+                    localStorage.setItem(emailStorageKey, email);
+                    localStorage.setItem(popupStorageKey, "true");
+
+                    if (giftPopupMessage) {
+                        giftPopupMessage.textContent = data.message || "You're on the Luxeja list for gift updates.";
+                    }
+
+                    giftPopupForm.reset();
+                    window.setTimeout(closeGiftPopup, 1400);
+                } catch (error) {
+                    if (giftPopupMessage) {
+                        giftPopupMessage.textContent = error.message || "We couldn't save your email right now.";
+                    }
+                }
             });
         }
 
